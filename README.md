@@ -17,3 +17,6 @@ Program dibuat untuk mengelola keanggotaan dari suatu toko. Data dalam program i
 3. Menu login dapat memunculkan data member dengan cara memasukkan nomor telepon
 4. Setelah memasukkan nomor telepon, data member yang sesuai akan muncul beserta poinnya
 5. Terdapat menu menambah poin atau mengurangi poin.
+
+# Diagram alir
+![membertoko](https://github.com/user-attachments/assets/744cc5f1-2bf8-45dc-abef-09171f1e42c5)
