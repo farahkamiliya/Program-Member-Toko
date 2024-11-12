@@ -19,4 +19,4 @@ Program dibuat untuk mengelola keanggotaan dari suatu toko. Data dalam program i
 5. Terdapat menu menambah poin atau mengurangi poin.
 
 # Diagram alir
-![membertoko](https://github.com/user-attachments/assets/e8e70398-a627-4adb-abd2-2d12105d41f7)
+![membertoko](https://github.com/user-attachments/assets/092f45d0-63ea-41ca-b039-74eb0aea8100)
