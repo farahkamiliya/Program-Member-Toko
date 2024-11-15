@@ -19,4 +19,7 @@ Program dibuat untuk mengelola keanggotaan dari suatu toko. Data dalam program i
 5. Terdapat menu menambah poin atau mengurangi poin.
 
 # Diagram alir
+![WhatsApp Image 2024-11-15 at 21 06 55_940ca628](https://github.com/user-attachments/assets/66f5b2d1-11ae-4669-bcc7-bf025a8a2ce9)
+
+# Diagram alir (revisi)
 ![membertoko](https://github.com/user-attachments/assets/a50b8619-2d54-4abe-bc09-d73fc0aeacfe)
