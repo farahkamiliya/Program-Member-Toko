@@ -37,7 +37,6 @@ def main():
     try:
         admin_data = baca_data_admin(csv_file)
     except FileNotFoundError:
-        print("File CSV tidak ditemukan. Pastikan file admin_data.csv ada.")
         return
     
     print("=== Login Admin ===")
@@ -52,7 +51,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-git commit -m "Initial commit"
 
     while True:
         print("\nMenu Utama:")
