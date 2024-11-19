@@ -50,8 +50,28 @@ def login_admin(admin_data):
 
 def main():
     csv_file = 'admin_data.csv'
+<<<<<<< HEAD
     admin_data = baca_data_admin(csv_file)
     login_admin(admin_data)
+=======
+    
+    try:
+        admin_data = baca_data_admin(csv_file)
+    except FileNotFoundError:
+        return
+    
+    print("=== Login Admin ===")
+    no_hp = input("Masukkan No HP: ")
+    password = input("Masukkan Password: ")
+    
+
+    if validasi_admin(admin_data, no_hp, password):
+        print("Login berhasil! Selamat datang, Admin.")
+    else:
+        print("Bukan admin. Akses ditolak.")
+
+if __name__ == '__main__':
+    main()
 
     while True:
         print("\nMenu Utama:")
