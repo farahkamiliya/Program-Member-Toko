@@ -50,11 +50,8 @@ def login_admin(admin_data):
 
 def main():
     csv_file = 'admin_data.csv'
-<<<<<<< HEAD
     admin_data = baca_data_admin(csv_file)
     login_admin(admin_data)
-=======
-    
     try:
         admin_data = baca_data_admin(csv_file)
     except FileNotFoundError:
