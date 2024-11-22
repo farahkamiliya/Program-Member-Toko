@@ -57,28 +57,19 @@ def main():
     except FileNotFoundError:
         return
     
-    print("=== Login Admin ===")
-    no_hp = input("Masukkan No HP: ")
-    password = input("Masukkan Password: ")
-    
-
-    if validasi_admin(admin_data, no_hp, password):
-        print("Login berhasil! Selamat datang, Admin.")
-    else:
-        print("Bukan admin. Akses ditolak.")
-
 if __name__ == '__main__':
     main()
 
     while True:
         print("\nMenu Utama:")
         print("1. Daftar Member")
-        print("2. Keluar")
-        pilihan = input("Pilih menu (1/2): ")
+        print("2. login")
+        print("3. Keluar")
+        pilihan = input("Pilih menu (1/2/3): ")
 
         if pilihan == "1":
             daftar_member()
-        elif pilihan == "2":
+        elif pilihan == "3":
             print("Terima kasih, program selesai.")
             break
         else:
