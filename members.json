@@ -1,0 +1,32 @@
+[
+    {
+        "no_telepon": "081234567890",
+        "e-mail": "john@gmail.com",
+        "nama": "John Doe",
+        "poin": 1650
+    },
+    {
+        "no_telepon": "08816637483",
+        "e-mail": "mara@gmail.com",
+        "nama": "mara",
+        "poin": 870
+    },
+    {
+        "no_telepon": "08886637483",
+        "e-mail": "maratus@gmail.com",
+        "nama": "maratus",
+        "poin": 0
+    },
+    {
+        "no_telepon": "081262184370",
+        "e-mail": "farah@gmail.com",
+        "nama": "farah",
+        "poin": 0
+    },
+    {
+        "no_telepon": "1",
+        "email": "a",
+        "nama": "m",
+        "poin": 0
+    }
+]
