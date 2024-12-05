@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "no_telepon": "081234567890",
         "e-mail": "john@gmail.com",
         "nama": "John Doe",
@@ -30,3 +31,10 @@
         "poin": 0
     }
 ]
+=======
+    "no_telepon": "081234567890",
+    "nama": "John Doe",
+    "poin": 300
+    }
+]
+>>>>>>> baea7932fcfad48955d93dc61498ad0c602415cb
