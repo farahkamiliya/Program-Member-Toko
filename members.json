@@ -1,7 +1,5 @@
 [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         "no_telepon": "081234567890",
         "e-mail": "john@gmail.com",
         "nama": "John Doe",
@@ -27,19 +25,11 @@
     },
     {
         "no_telepon": "1",
-        "email": "a",
+        "e-mail": "a",
         "nama": "m",
         "poin": 0
-    }
-]
-=======
-    "no_telepon": "081234567890",
-    "nama": "John Doe",
-    "poin": 300
-    }
-]
->>>>>>> baea7932fcfad48955d93dc61498ad0c602415cb
-=======
+    },
+    {
         "no_telepon": "081234567890",
         "e-mail": "john@gmail.com",
         "nama": "John Doe",
@@ -68,6 +58,11 @@
         "e-mail": "farah@gmail.com",
         "nama": "farah",
         "poin": 9500
+    },
+    {
+        "no_telepon": "2",
+        "e-mail": "b",
+        "nama": "b",
+        "poin": 750
     }
 ]
->>>>>>> a9238bda9d71715086d9d91c7a4d0f3798324567
