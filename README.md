@@ -12,14 +12,20 @@ Anggota :
 Program dibuat untuk mengelola keanggotaan dari suatu toko. Data dalam program ini ada Nama, nomor telepon, dan jumlah poin. Program bisa menambah member baru dan menambah atau mengurangi Poin dari member yang sudah ada.
 
 # Fitur Aplikasi
-1. Terdapat menu Daftar/Login
-2. Menu Daftar dapat menambah data member baru
-3. Menu login dapat memunculkan data member dengan cara memasukkan nomor telepon
-4. Setelah memasukkan nomor telepon, data member yang sesuai akan muncul beserta poinnya
-5. Terdapat menu menambah poin atau mengurangi poin.
+1. Terdapat menu login admin toko
+2. Terdapat menu Daftar/Login member
+3. Menu Daftar dapat menambah data member baru
+4. Menu login dapat memunculkan data member dengan cara memasukkan nomor telepon
+5. Setelah memasukkan nomor telepon, data member yang sesuai akan muncul beserta poinnya
+6. Terdapat menu menambah poin atau menukar poin.
+7. Poin bisa ditukar dengan voucher 25% atau 50% lalu muncul kode diskon
 
 # Diagram alir
 ![WhatsApp Image 2024-11-15 at 21 06 55_940ca628](https://github.com/user-attachments/assets/66f5b2d1-11ae-4669-bcc7-bf025a8a2ce9)
 
 # Diagram alir (revisi)
 ![WhatsApp Image 2024-11-25 at 12 37 59_b4119b33](https://github.com/user-attachments/assets/baa63dd8-f089-4b42-ae5f-979027e060b6)
+
+# Sitemap
+![WhatsApp Image 2024-12-06 at 18 44 36_7982ebc8](https://github.com/user-attachments/assets/4e93d0cc-bdd6-42bc-9c98-61e720723a66)
+
