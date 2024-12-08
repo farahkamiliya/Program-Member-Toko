@@ -132,12 +132,15 @@ def show_menu():
     label_img.image = img_tk  # Menyimpan referensi gambar
     label_img.grid(row=3, column=0)
     
-    label_menu_utama = tk.Label(menu_utama, text="Menu Utama", bg="#F5C400", font=("segoe UI", 45))
-    label_menu_utama.grid(row=0, column=1, pady=(150, 10), padx=150, sticky="w")
-    button_daftar_member = tk.Button(menu_utama, text="Daftar Member", bg='#102A71', fg='white', font=("segoe UI", 20), command=show_daftar_member)
-    button_daftar_member.grid(row=2, column=1, pady=10, padx=20)
-    button_Login_member = tk.Button(menu_utama, text="Login Member", bg='#102A71', fg='white', font=("segoe UI", 20), command=lg.show_login_member)
-    button_Login_member.grid(row=3, column=1, pady=10, padx=20)
+    label_menu = tk.Label(menu_utama, text="Menu Utama", bg="#F5C400", font=("segoe UI", 45))
+    label_menu.grid(row=0, column=1, pady=(150, 10), padx=150, sticky="w")
+    
+    button_daftarmember = tk.Button(menu_utama, text="Daftar Member", bg='#102A71', fg='white', font=("segoe UI", 20), command=show_daftar_member)
+    button_daftarmember.grid(row=2, column=1, pady=10, padx=20)
+    
+    button_Loginmember = tk.Button(menu_utama, text="Login Member", bg='#102A71', fg='white', font=("segoe UI", 20), command=lg.show_login_member)
+    button_Loginmember.grid(row=3, column=1, pady=10, padx=20)
+    
     button_keluar = tk.Button(menu_utama, text="Keluar", bg='#102A71', fg='white', font=("segoe UI", 20), command=root.quit)
     button_keluar.grid(row=4, column=1, pady=10, padx=20)
 
@@ -145,38 +148,41 @@ def show_menu():
 
 # Fungsi untuk menampilkan form pendaftaran member
 def show_daftar_member():
-    daftar_member = tk.Frame(root, bg="#F5C400")  
-    daftar_member.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
+    daftar_member_frame = tk.Frame(root, bg="#F5C400")  
+    daftar_member_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
-    label_daftar_member = tk.Label(daftar_member, text="Daftar Member", bg='#F5C400', font=("segoe UI", 45, "bold"))
+    label_daftar_member = tk.Label(daftar_member_frame, text="Daftar Member", bg='#F5C400', font=("segoe UI", 45, "bold"))
     label_daftar_member.grid(row=0, column=1, pady=(150,30), padx=150, sticky="w")
     from PIL import Image
     img = Image.open(r"D:\projecta\envprojecta\logo.png")
     img = img.resize((683, 149))
     img_tk = ImageTk.PhotoImage(img)
-    label_img = tk.Label(daftar_member, image=img_tk, bg="#F5C400")
+    label_img = tk.Label(daftar_member_frame, image=img_tk, bg="#F5C400")
     label_img.image = img_tk
     label_img.grid(row=2, column=0, padx=20, pady=20)
 
     global entry_nama, entry_no_telepon, entry_email
-    tk.Label(daftar_member, text="Nama:", bg='#F5C400', font=("segoe UI", 20)).grid(row=1, column=1, pady=10, padx=30, sticky="w")
-    entry_nama = tk.Entry(daftar_member, width=22, font=("segoe UI", 20))
+    label_nama = tk.Label(daftar_member_frame, text="Nama:", bg='#F5C400', font=("segoe UI", 20))
+    label_nama.grid(row=1, column=1, pady=10, padx=30, sticky="w")
+    entry_nama = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_nama.grid(row=1, column=1, padx=20, pady=10)
 
-    tk.Label(daftar_member, text="No Telepon:", bg='#F5C400', font=("segoe UI", 20)).grid(row=2, column=1, pady=10, padx=30, sticky="w")
-    entry_no_telepon = tk.Entry(daftar_member, width=22, font=("segoe UI", 20))
+    label_no_telepon_member = tk.Label(daftar_member_frame, text="No Telepon:", bg='#F5C400', font=("segoe UI", 20))
+    label_no_telepon_member.grid(row=2, column=1, pady=10, padx=30, sticky="w")
+    entry_no_telepon = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_no_telepon.grid(row=2, column=1, padx=20, pady=10)
 
-    tk.Label(daftar_member, text="Email:", bg='#F5C400', font=("segoe UI", 20)).grid(row=3, column=1, pady=10, padx=30, sticky="w")
-    entry_email = tk.Entry(daftar_member, width=22, font=("segoe UI", 20))
+    label_email = tk.Label(daftar_member_frame, text="Email:", bg='#F5C400', font=("segoe UI", 20))
+    label_email.grid(row=3, column=1, pady=10, padx=30, sticky="w")
+    entry_email = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_email.grid(row=3, column=1, padx=20, pady=10)
 
-    button_daftar = tk.Button(daftar_member, text="Daftar", bg='#102A71', fg='white', font=("segoe UI", 15), command=daftar_member)
+    button_daftar = tk.Button(daftar_member_frame, text="Daftar", bg='#102A71', fg='white', font=("segoe UI", 15), command=daftar_member)
     button_daftar.grid(row=4, column=1, pady=10, padx=20)
-    button_kembali = tk.Button(daftar_member, text="Kembali ke Menu Utama", bg='#102A71', fg='white', font=("segoe UI", 15), command=show_menu)
+    button_kembali = tk.Button(daftar_member_frame, text="Kembali ke Menu Utama", bg='#102A71', fg='white', font=("segoe UI", 15), command=show_menu)
     button_kembali.grid(row=5, column=1, pady=10, padx=20)
 
-    switch_frame(daftar_member)
+    switch_frame(daftar_member_frame)
 
 # Fungsi untuk mengganti frame
 def switch_frame(new_frame):
