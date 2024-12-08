@@ -20,6 +20,15 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 6. Terdapat menu menambah poin atau menukar poin.
 7. Poin bisa ditukar dengan voucher 25% atau 50% lalu muncul kode diskon
 
+# Library yang digunakan
+1. tkinter: Untuk membuat GUI (Graphical User Interface).
+    -Modul utama: tk
+    -Submodul: messagebox
+2. csv: Untuk membaca dan menulis file CSV.
+3. json: Untuk membaca dan menulis file dalam format JSON
+4. Pillow (PIL): Digunakan untuk memproses dan menampilkan gambar (Image, ImageTk).
+5. string dan random: Untuk menghasilkan kode acak berupa kombinasi huruf dan angka.
+
 # Diagram alir
 ![WhatsApp Image 2024-11-15 at 21 06 55_940ca628](https://github.com/user-attachments/assets/66f5b2d1-11ae-4669-bcc7-bf025a8a2ce9)
 
