@@ -52,12 +52,12 @@ def gunakan_voucher(no_telepon, jumlah_poin):
         # Menghasilkan kode acak setelah voucher berhasil ditukar
         random_code = generate_random_code()
         
-        messagebox.showinfo("Berhasil", f"Voucher berhasil digunakan!\nPoin Anda sekarang: {member_found['poin']}\nKode Anda: {random_code}")
+        messagebox.showinfo("Berhasil", f"Voucher berhasil digunakan!\nPoin Anda sekarang: {member_found['poin']}\nKode Redeem: {random_code}")
     else:
         messagebox.showwarning("Gagal", "Poin Anda tidak mencukupi untuk voucher ini.")
         
 # Fungsi untuk membuat menu voucher
-def buat_menu(no_telepon):
+def buat_menu_voucher(no_telepon):
     global window
     if window is not None and tk.Toplevel.winfo_exists(window):
         messagebox.showinfo("Info", "Jendela sudah terbuka!")
@@ -80,20 +80,22 @@ def buat_menu(no_telepon):
     window.bind("<Escape>", lambda e: window.attributes("-fullscreen", False))
 
     # Frame utama untuk pusat elemen
-    frame = tk.Frame(window, bg="#F5C400")
-    frame.place(relx=0.5, rely=0.5, anchor="center")
+    frameVoucher = tk.Frame(window, bg="#F5C400")
+    frameVoucher.place(relx=0.5, rely=0.5, anchor="center")
 
     # Menampilkan informasi pengguna
-    tk.Label(frame, text=f" Tukar Poin", bg="#F5C400", font=("segoe UI", 45, "bold")).grid(row=0, column=0, columnspan=2, pady=20)
-    tk.Label(frame, text=f"Nama: {member_found['nama']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=1, column=0, columnspan=2, pady=10)
-    tk.Label(frame, text=f"Email: {member_found['e-mail']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=2, column=0, columnspan=2, pady=10)
-    tk.Label(frame, text=f"Poin Anda: {member_found['poin']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=3, column=0, columnspan=2, pady=10)
+    tk.Label(frameVoucher, text=f" Tukar Poin", bg="#F5C400", font=("segoe UI", 45, "bold")).grid(row=0, column=0, columnspan=2, pady=20)
+    tk.Label(frameVoucher, text=f"Nama: {member_found['nama']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=1, column=0, columnspan=2, pady=10)
+    tk.Label(frameVoucher, text=f"Email: {member_found['e-mail']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=2, column=0, columnspan=2, pady=10)
+    tk.Label(frameVoucher, text=f"Poin Anda: {member_found['poin']}", bg="#F5C400", font=("Segoe UI", 20)).grid(row=3, column=0, columnspan=2, pady=10)
 
     # Menampilkan opsi voucher
-    tk.Label(frame, text="=== Pilih Voucher ===", bg="#F5C400", font=("Segoe UI", 20)).grid(row=4, column=0, columnspan=2, pady=20)
-    tk.Button(frame, text="Voucher Diskon 40% (500 poin)", command=lambda: gunakan_voucher(no_telepon, 500), bg="#102A71", fg="white", font=("Segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=10)
-    tk.Button(frame, text="Voucher Diskon 25% (250 poin)", command=lambda: gunakan_voucher(no_telepon, 250), bg="#102A71", fg="white", font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=10)
-
+    tk.Label(frameVoucher, text="=== Pilih Voucher ===", bg="#F5C400", font=("Segoe UI", 20)).grid(row=4, column=0, columnspan=2, pady=20)
+    button_tukarVoucher40 = tk.Button(frameVoucher, text="Voucher Diskon 40% (500 poin)", command=lambda: gunakan_voucher(no_telepon, 500), bg="#102A71", fg="white", font=("Segoe UI", 15))
+    button_tukarVoucher40.grid(row=5, column=0, columnspan=2, pady=10)
+    button_tukarvoucher20 = tk.Button(frameVoucher, text="Voucher Diskon 25% (250 poin)", command=lambda: gunakan_voucher(no_telepon, 250), bg="#102A71", fg="white", font=("Segoe UI", 15))
+    button_tukarvoucher20.grid(row=6, column=0, columnspan=2, pady=10)
+    
     window.mainloop()
 
 # Fungsi untuk mereset variabel window
