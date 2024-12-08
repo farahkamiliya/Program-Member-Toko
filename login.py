@@ -48,16 +48,16 @@ def show_login_member():
     login_window.bind("<Escape>", lambda e: login_window.attributes('-fullscreen', False))
 
     # Frame utama untuk pusat elemen
-    frame = tk.Frame(login_window, bg='#F5C400')
-    frame.grid(row=0, column=0, padx=20, pady=20)
-    frame.place(relx=0.5, rely=0.5, anchor='center')  # Pusatkan frame
+    frame_login = tk.Frame(login_window, bg='#F5C400')
+    frame_login.grid(row=0, column=0, padx=20, pady=20)
+    frame_login.place(relx=0.5, rely=0.5, anchor='center')  # Pusatkan frame
 
-    tk.Label(frame, text="Login Member", bg='#F5C400', font=("segoe UI", 45, "bold")).grid(row=0, column=0, columnspan=2, pady=40)
-    tk.Label(frame, text="Nomor Telepon:", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, padx=10, pady=10)
-    entry_no_hp = tk.Entry(frame, width=22, font=("Segoe UI", 20))
+    label_login_member = tk.Label(frame_login, text="Login Member", bg='#F5C400', font=("segoe UI", 45, "bold")).grid(row=0, column=0, columnspan=2, pady=40)
+    label_nomor_telepon = tk.Label(frame_login, text="Nomor Telepon:", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, padx=10, pady=10)
+    entry_no_hp = tk.Entry(frame_login, width=22, font=("Segoe UI", 20))
     entry_no_hp.grid(row=1, column=1, padx=10, pady=10)
 
-    tk.Button(frame, text="Login", bg='#102A71', fg='white', font=("Segoe UI", 20), command=login).grid(row=2, column=0, columnspan=2, pady=30)
+    button_login = tk.Button(frame_login, text="Login", bg='#102A71', fg='white', font=("Segoe UI", 20), command=login).grid(row=2, column=0, columnspan=2, pady=30)
 
     login_window.mainloop()
 
@@ -91,21 +91,21 @@ def show_member_page(member):
     member_window.bind("<Escape>", lambda e: member_window.attributes('-fullscreen', False))
 
     # Frame utama untuk pusat elemen
-    frame = tk.Frame(member_window, bg='#F5C400')
-    frame.place(relx=0.5, rely=0.5, anchor='center')
+    page_member = tk.Frame(member_window, bg='#F5C400')
+    page_member.place(relx=0.5, rely=0.5, anchor='center')
 
     # Elemen dalam frame
-    tk.Label(frame, text=f"Nama: {member['nama']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=0, column=0, columnspan=2, pady=10)
-    tk.Label(frame, text=f"E-mail: {member['e-mail']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, columnspan=2, pady=10)
-    tk.Label(frame, text=f"Poin: {member['poin']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=2, column=0, columnspan=2, pady=10)
+    label_nama_member = tk.Label(page_member, text=f"Nama: {member['nama']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=0, column=0, columnspan=2, pady=10)
+    label_email_member = tk.Label(page_member, text=f"E-mail: {member['e-mail']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, columnspan=2, pady=10)
+    label_poin_member = tk.Label(page_member, text=f"Poin: {member['poin']}", bg='#F5C400', font=("Segoe UI", 20)).grid(row=2, column=0, columnspan=2, pady=10)
 
-    tk.Label(frame, text="Nilai Belanja (Rp):", bg='#F5C400', font=("Segoe UI", 20)).grid(row=3, column=0, pady=10)
-    belanja_entry = tk.Entry(frame, width=22, font=("Segoe UI", 20))
+    label_nilai_belanja = tk.Label(page_member, text="Nilai Belanja (Rp):", bg='#F5C400', font=("Segoe UI", 20)).grid(row=3, column=0, pady=10)
+    belanja_entry = tk.Entry(page_member, width=22, font=("Segoe UI", 20))
     belanja_entry.grid(row=3, column=1, pady=10)
 
-    tk.Button(frame, text="Tambah Poin", bg='#102A71', fg='white', font=("Segoe UI", 15), command=tambah_poin).grid(row=4, column=0, columnspan=2, pady=20)
-    tk.Button(frame, text="Tukar Poin", command=lambda: vc.buat_menu(member['no_telepon']),bg='#102A71', fg='white', font=("segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=20)
-    tk.Button(frame, text="Keluar", command=close_member_window, bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=20)
+    Button_tambah_poin = tk.Button(page_member, text="Tambah Poin", bg='#102A71', fg='white', font=("Segoe UI", 15), command=tambah_poin).grid(row=4, column=0, columnspan=2, pady=20)
+    Button_tukar_poin = tk.Button(page_member, text="Tukar Poin", command=lambda: vc.buat_menu_voucher(member['no_telepon']),bg='#102A71', fg='white', font=("segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=20)
+    Button_keluar = tk.Button(page_member, text="Keluar", command=close_member_window, bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=20)
     
 # Jalankan aplikasi
 if __name__ == "__main__":
