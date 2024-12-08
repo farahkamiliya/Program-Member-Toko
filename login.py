@@ -4,7 +4,7 @@ import json
 import voucher as vc
 
 # Fungsi untuk memuat data member dari file JSON
-def load_members():
+def memuat_data_member():
     try:
         with open('members.json', 'r') as file:
             members = json.load(file)
@@ -13,30 +13,30 @@ def load_members():
         return []
 
 # Fungsi untuk menyimpan data member ke file JSON
-def save_members(members):
+def simpan_data_member(members):
     with open('members.json', 'w') as file:
         json.dump(members, file, indent=4)
 
 # Fungsi untuk memverifikasi nomor telepon
-def verify_phone_number(phone_number):
-    members = load_members()
+def verifikasi_nomor_hp(nomor_hp):
+    members = memuat_data_member()
     for member in members:
-        if member.get('no_telepon') == phone_number:
+        if member.get('no_telepon') == nomor_hp:
             return member
     return None
 
 # Fungsi untuk halaman login
-def show_login_page():
-    def handle_login():
-        phone_number = phone_entry.get()
-        member = verify_phone_number(phone_number)
+def show_login_member():
+    def login():
+        nomor_hp = entry_no_hp.get()
+        member = verifikasi_nomor_hp(nomor_hp)
         
         if member:
             login_window.destroy()
             show_member_page(member)
         else:
             messagebox.showerror("Error", "Nomor telepon tidak terdaftar!")
-            phone_entry.delete(0, tk.END)
+            entry_no_hp.delete(0, tk.END)
 
     # Buat window login
     login_window = tk.Tk()
@@ -54,26 +54,26 @@ def show_login_page():
 
     tk.Label(frame, text="Login Member", bg='#F5C400', font=("segoe UI", 45, "bold")).grid(row=0, column=0, columnspan=2, pady=40)
     tk.Label(frame, text="Nomor Telepon:", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, padx=10, pady=10)
-    phone_entry = tk.Entry(frame, width=22, font=("Segoe UI", 20))
-    phone_entry.grid(row=1, column=1, padx=10, pady=10)
+    entry_no_hp = tk.Entry(frame, width=22, font=("Segoe UI", 20))
+    entry_no_hp.grid(row=1, column=1, padx=10, pady=10)
 
-    tk.Button(frame, text="Login", bg='#102A71', fg='white', font=("Segoe UI", 20), command=handle_login).grid(row=2, column=0, columnspan=2, pady=30)
+    tk.Button(frame, text="Login", bg='#102A71', fg='white', font=("Segoe UI", 20), command=login).grid(row=2, column=0, columnspan=2, pady=30)
 
     login_window.mainloop()
 
 # Fungsi untuk halaman member
 def show_member_page(member):
-    def add_points():
+    def tambah_poin():
         try:
             belanja = int(belanja_entry.get())
-            added_points = belanja // 1000
-            member['poin'] += added_points
-            members = load_members()
+            poin_tambahan = belanja // 1000
+            member['poin'] += poin_tambahan
+            members = memuat_data_member()
             for i, m in enumerate(members):
                 if m['no_telepon'] == member['no_telepon']:
                     members[i] = member
                     break
-            save_members(members)
+            simpan_data_member(members)
             messagebox.showinfo("Berhasil", f"Poin berhasil ditambahkan! Poin total: {member['poin']}")
         except ValueError:
             messagebox.showerror("Error", "Masukkan nilai belanja yang valid!")
@@ -103,10 +103,10 @@ def show_member_page(member):
     belanja_entry = tk.Entry(frame, width=22, font=("Segoe UI", 20))
     belanja_entry.grid(row=3, column=1, pady=10)
 
-    tk.Button(frame, text="Tambah Poin", bg='#102A71', fg='white', font=("Segoe UI", 15), command=add_points).grid(row=4, column=0, columnspan=2, pady=20)
+    tk.Button(frame, text="Tambah Poin", bg='#102A71', fg='white', font=("Segoe UI", 15), command=tambah_poin).grid(row=4, column=0, columnspan=2, pady=20)
     tk.Button(frame, text="Tukar Poin", command=lambda: vc.buat_menu(member['no_telepon']),bg='#102A71', fg='white', font=("segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=20)
     tk.Button(frame, text="Keluar", command=close_member_window, bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=20)
     
 # Jalankan aplikasi
 if __name__ == "__main__":
-    show_login_page()
+    show_login_member()
