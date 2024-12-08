@@ -9,7 +9,7 @@ Anggota :
 3. Farah Kamiliya Izzati, I0324045, [@farahkamiliya](https://github.com/farahkamiliya)
 
 # Program-Member-Toko
-Program dibuat untuk mengelola keanggotaan dari suatu toko. Data dalam program ini ada Nama, nomor telepon, dan jumlah poin. Program bisa menambah member baru dan menambah atau mengurangi Poin dari member yang sudah ada.
+Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup data nama, nomor telepon, e-mail, dan jumlah poin setiap anggota. Fitur utama meliputi penambahan anggota baru, pengelolaan poin untuk menambah atau mengurangi berdasarkan transaksi atau penukaran voucher, serta pembaruan data anggota secara mudah. Program juga dilengkapi validasi nomor telepon admin untuk mencegah kebocoran data member. Dengan fitur-fitur ini, program membantu meningkatkan layanan pelanggan melalui sistem keanggotaan yang terstruktur dan bermanfaat.
 
 # Fitur Aplikasi
 1. Terdapat menu login admin toko
