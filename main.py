@@ -93,8 +93,7 @@ def show_login_admin():
     loginAdmin = tk.Frame(root, bg="#F5C400") 
     loginAdmin.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
     
-    label_login_admin = tk.Label(loginAdmin, text="Login Admin", bg="#F5C400", font=("segoe UI", 45))
-    label_login_admin.grid(row=0, column=1, pady=(150,10), padx=150, sticky="w")
+    tk.Label(loginAdmin, text="Login Admin", bg="#F5C400", font=("segoe UI", 45)).grid(row=0, column=1, pady=(150,10), padx=150, sticky="w")
     from PIL import Image
     img = Image.open(r"D:\projecta\envprojecta\logo.png")
     img = img.resize((683, 149))
@@ -104,13 +103,11 @@ def show_login_admin():
     label_img.grid(row=2, column=0, padx=20, pady=20)
 
     global entry_no_hp, entry_password
-    button_No_hp_admin = tk.Label(loginAdmin, text="No HP:", bg='#F5C400', font=("segoe UI", 20))
-    button_No_hp_admin.grid(row=1, column=1, pady=10, padx=20, sticky='E' + 'W' + 'S')
+    tk.Label(loginAdmin, text="No HP:", bg='#F5C400', font=("segoe UI", 20)).grid(row=1, column=1, pady=10, padx=20, sticky='E' + 'W' + 'S')
     entry_no_hp = tk.Entry(loginAdmin, width=22, font=("segoe UI", 20))
     entry_no_hp.grid(row=2, column=1, sticky='E' + 'W')
 
-    label_Password = tk.Label(loginAdmin, text="Password:", bg='#F5C400', font=("segoe UI", 20))
-    label_Password.grid(row=3, column=1, padx=20, pady=10, sticky='E' + 'W')
+    tk.Label(loginAdmin, text="Password:", bg='#F5C400', font=("segoe UI", 20)).grid(row=3, column=1, padx=20, pady=10, sticky='E' + 'W')
     entry_password = tk.Entry(loginAdmin, width=22, font=("segoe UI", 20), show="*")
     entry_password.grid(row=4, column=1, sticky='E' + 'W')
 
@@ -132,8 +129,7 @@ def show_menu():
     label_img.image = img_tk  # Menyimpan referensi gambar
     label_img.grid(row=3, column=0)
     
-    label_menu = tk.Label(menu_utama, text="Menu Utama", bg="#F5C400", font=("segoe UI", 45))
-    label_menu.grid(row=0, column=1, pady=(150, 10), padx=150, sticky="w")
+    tk.Label(menu_utama, text="Menu Utama", bg="#F5C400", font=("segoe UI", 45)).grid(row=0, column=1, pady=(150, 10), padx=150, sticky="w")
     
     button_daftarmember = tk.Button(menu_utama, text="Daftar Member", bg='#102A71', fg='white', font=("segoe UI", 20), command=show_daftar_member)
     button_daftarmember.grid(row=2, column=1, pady=10, padx=20)
@@ -151,8 +147,7 @@ def show_daftar_member():
     daftar_member_frame = tk.Frame(root, bg="#F5C400")  
     daftar_member_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nsew")
 
-    label_daftar_member = tk.Label(daftar_member_frame, text="Daftar Member", bg='#F5C400', font=("segoe UI", 45, "bold"))
-    label_daftar_member.grid(row=0, column=1, pady=(150,30), padx=150, sticky="w")
+    tk.Label(daftar_member_frame, text="Daftar Member", bg='#F5C400', font=("segoe UI", 45, "bold")).grid(row=0, column=1, pady=(150,30), padx=150, sticky="w")
     from PIL import Image
     img = Image.open(r"D:\projecta\envprojecta\logo.png")
     img = img.resize((683, 149))
@@ -162,18 +157,15 @@ def show_daftar_member():
     label_img.grid(row=2, column=0, padx=20, pady=20)
 
     global entry_nama, entry_no_telepon, entry_email
-    label_nama = tk.Label(daftar_member_frame, text="Nama:", bg='#F5C400', font=("segoe UI", 20))
-    label_nama.grid(row=1, column=1, pady=10, padx=30, sticky="w")
+    tk.Label(daftar_member_frame, text="Nama:", bg='#F5C400', font=("segoe UI", 20)).grid(row=1, column=1, pady=10, padx=30, sticky="w")
     entry_nama = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_nama.grid(row=1, column=1, padx=20, pady=10)
 
-    label_no_telepon_member = tk.Label(daftar_member_frame, text="No Telepon:", bg='#F5C400', font=("segoe UI", 20))
-    label_no_telepon_member.grid(row=2, column=1, pady=10, padx=30, sticky="w")
+    tk.Label(daftar_member_frame, text="No Telepon:", bg='#F5C400', font=("segoe UI", 20)).grid(row=2, column=1, pady=10, padx=30, sticky="w")
     entry_no_telepon = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_no_telepon.grid(row=2, column=1, padx=20, pady=10)
 
-    label_email = tk.Label(daftar_member_frame, text="Email:", bg='#F5C400', font=("segoe UI", 20))
-    label_email.grid(row=3, column=1, pady=10, padx=30, sticky="w")
+    tk.Label(daftar_member_frame, text="Email:", bg='#F5C400', font=("segoe UI", 20)).grid(row=3, column=1, pady=10, padx=30, sticky="w")
     entry_email = tk.Entry(daftar_member_frame, width=22, font=("segoe UI", 20))
     entry_email.grid(row=3, column=1, padx=20, pady=10)
 
