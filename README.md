@@ -22,8 +22,6 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 
 # Library yang digunakan
 1. tkinter: Untuk membuat GUI (Graphical User Interface).
-    -Modul utama: tk
-    -Submodul: messagebox
 2. csv: Untuk membaca dan menulis file CSV.
 3. json: Untuk membaca dan menulis file dalam format JSON
 4. Pillow (PIL): Digunakan untuk memproses dan menampilkan gambar (Image, ImageTk).
