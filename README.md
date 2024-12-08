@@ -17,8 +17,8 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 3. Menu Daftar dapat menambah data member baru
 4. Menu login dapat memunculkan data member dengan cara memasukkan nomor telepon
 5. Setelah memasukkan nomor telepon, data member yang sesuai akan muncul beserta poinnya
-6. Terdapat menu menambah poin atau menukar poin.
-7. Poin bisa ditukar dengan voucher 25% atau 50% lalu muncul kode diskon
+6. Terdapat menu menambah poin atau menukar poin
+7. Poin bisa ditukar dengan voucher 25% atau 40% lalu muncul kode redeem
 
 # Library yang digunakan
 1. tkinter: Untuk membuat GUI (Graphical User Interface).
@@ -32,6 +32,11 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 
 # Diagram alir (revisi)
 ![WhatsApp Image 2024-11-25 at 12 37 59_b4119b33](https://github.com/user-attachments/assets/baa63dd8-f089-4b42-ae5f-979027e060b6)
+Diagram alir di atas menggambarkan proses kerja sebuah sistem program keanggotaan yang mengelola data anggota, penukaran poin, dan pemberian voucher. Proses dimulai dengan login menggunakan nomor telepon dan password admin untuk mengakses menu utama. Dalam menu utama, terdapat tiga pilihan: mendaftarkan anggota baru, login sebagai anggota, atau keluar dari sistem.
+
+Jika memilih untuk mendaftar, pengguna akan mengisi data seperti nama, nomor telepon, dan email, yang kemudian disimpan oleh sistem. Setelah berhasil, akan muncul pesan konfirmasi bahwa pendaftaran telah selesai. Jika pengguna sudah menjadi anggota, mereka dapat login menggunakan nomor telepon yang sudah terdaftar. Jika nomor tersebut ditemukan di sistem, informasi anggota seperti nama, nomor telepon, email, dan poin terkini akan ditampilkan.
+
+Setelah login, anggota dapat memasukkan total belanja untuk menambahkan poin baru. Perhitungan poin dilakukan berdasarkan total belanja dibagi 1.000. Sistem kemudian menyimpan poin terkini yang telah diperbarui. Selanjutnya, anggota memiliki opsi untuk menukarkan poin dengan voucher. Jika memilih menukarkan poin, sistem akan menampilkan dua pilihan: voucher diskon 40% (dengan pengurangan 500 poin) atau voucher diskon 20% (dengan pengurangan 250 poin). Setelah penukaran berhasil, poin terkini akan diperbarui dan ditampilkan bersama kode redeem juga konfirmasi bahwa penukaran telah berhasil.
 
 # Sitemap
 ![WhatsApp Image 2024-12-06 at 18 44 36_7982ebc8](https://github.com/user-attachments/assets/4e93d0cc-bdd6-42bc-9c98-61e720723a66)
