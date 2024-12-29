@@ -33,7 +33,10 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 # Diagram alir (revisi)
 ![WhatsApp Image 2024-11-25 at 12 37 59_b4119b33](https://github.com/user-attachments/assets/baa63dd8-f089-4b42-ae5f-979027e060b6)
 
-  Diagram alir di atas menggambarkan proses kerja sebuah sistem program keanggotaan yang mengelola data anggota, penukaran poin, dan pemberian voucher. Proses dimulai dengan login menggunakan nomor telepon dan password admin untuk mengakses menu utama. Dalam menu utama, terdapat tiga pilihan: mendaftarkan anggota baru, login sebagai anggota, atau keluar dari sistem.
+# Diagram alir (Revisi terakhir)
+![membertoko7](https://github.com/user-attachments/assets/14ec0fea-cadc-4e7a-8b1d-1febe363162d)
+
+Diagram alir di atas menggambarkan proses kerja sebuah sistem program keanggotaan yang mengelola data anggota, penukaran poin, dan pemberian voucher. Proses dimulai dengan login menggunakan nomor telepon dan password admin untuk mengakses menu utama. Dalam menu utama, terdapat tiga pilihan: mendaftarkan anggota baru, login sebagai anggota, atau keluar dari sistem.
 
   Jika memilih untuk mendaftar, pengguna akan mengisi data seperti nama, nomor telepon, dan email, yang kemudian disimpan oleh sistem. Setelah berhasil, akan muncul pesan konfirmasi bahwa pendaftaran telah selesai. Jika pengguna sudah menjadi anggota, mereka dapat login menggunakan nomor telepon yang sudah terdaftar. Jika nomor tersebut ditemukan di sistem, informasi anggota seperti nama, nomor telepon, email, dan poin terkini akan ditampilkan.
 
