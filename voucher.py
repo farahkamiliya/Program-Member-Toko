@@ -1,21 +1,13 @@
-import json
 import tkinter as tk
 from tkinter import messagebox
 import json
 import string
 import random
+from datetime import datetime
+from zoneinfo import ZoneInfo
 
-current_frame = None
 file_member = "members.json"
 window = None
-
-# Fungsi untuk mengganti frame
-def switch_frame(new_frame):
-    global current_frame
-    if current_frame is not None:
-        current_frame.destroy()
-    current_frame = new_frame
-    current_frame.pack(fill="both", expand=True)
 
 # Fungsi untuk membaca data JSON
 def baca_data():
@@ -30,11 +22,22 @@ def baca_data():
 def simpan_data(data):
     with open(file_member, "w") as file:
         json.dump(data, file, indent=4)
-        
+
 # Fungsi untuk menghasilkan kode acak
 def generate_random_code(length=5):
-    characters = string.ascii_uppercase + string.digits  # Kombinasi huruf besar dan angka
+    characters = string.ascii_uppercase + string.digits
     return ''.join(random.choice(characters) for _ in range(length))
+
+# Fungsi untuk memperbarui history dan poin
+def update_history(member, action, amount):
+    now = datetime.now(ZoneInfo("Asia/Jakarta"))
+    history_entry = {
+        "action": action,
+        "amount": amount,
+        "date": now.strftime("%Y-%m-%d %H:%M:%S"),  # Format: Tahun-Bulan-Hari Jam:Menit:Detik
+        "riwayat_belanja":"-"
+    }
+    member["history"].append(history_entry)
 
 # Fungsi untuk menggunakan voucher
 def gunakan_voucher(no_telepon, jumlah_poin):
@@ -47,15 +50,21 @@ def gunakan_voucher(no_telepon, jumlah_poin):
 
     if member_found["poin"] >= jumlah_poin:
         member_found["poin"] -= jumlah_poin
+
+        # Catat history pengurangan poin
+        update_history(member_found, "redeem voucher", -jumlah_poin)
         simpan_data(data)
-        
+
         # Menghasilkan kode acak setelah voucher berhasil ditukar
         random_code = generate_random_code()
-        
-        messagebox.showinfo("Berhasil", f"Voucher berhasil digunakan!\nPoin Anda sekarang: {member_found['poin']}\nKode Redeem: {random_code}")
+
+        messagebox.showinfo(
+            "Berhasil",
+            f"Voucher berhasil digunakan!\nPoin Anda sekarang: {member_found['poin']}\nKode Redeem: {random_code}"
+        )
     else:
         messagebox.showwarning("Gagal", "Poin Anda tidak mencukupi untuk voucher ini.")
-        
+
 # Fungsi untuk membuat menu voucher
 def buat_menu_voucher(no_telepon):
     global window
@@ -91,11 +100,9 @@ def buat_menu_voucher(no_telepon):
 
     # Menampilkan opsi voucher
     tk.Label(frameVoucher, text="=== Pilih Voucher ===", bg="#F5C400", font=("Segoe UI", 20)).grid(row=4, column=0, columnspan=2, pady=20)
-    button_tukarVoucher40 = tk.Button(frameVoucher, text="Voucher Diskon 40% (500 poin)", command=lambda: gunakan_voucher(no_telepon, 500), bg="#102A71", fg="white", font=("Segoe UI", 15))
-    button_tukarVoucher40.grid(row=5, column=0, columnspan=2, pady=10)
-    button_tukarvoucher20 = tk.Button(frameVoucher, text="Voucher Diskon 25% (250 poin)", command=lambda: gunakan_voucher(no_telepon, 250), bg="#102A71", fg="white", font=("Segoe UI", 15))
-    button_tukarvoucher20.grid(row=6, column=0, columnspan=2, pady=10)
-    
+    tk.Button(frameVoucher, text="Voucher Diskon 40% (500 poin)", command=lambda: gunakan_voucher(no_telepon, 500), bg="#102A71", fg="white", font=("Segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=10)
+    tk.Button(frameVoucher, text="Voucher Diskon 25% (250 poin)", command=lambda: gunakan_voucher(no_telepon, 250), bg="#102A71", fg="white", font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=10)
+
     window.mainloop()
 
 # Fungsi untuk mereset variabel window

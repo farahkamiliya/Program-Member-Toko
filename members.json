@@ -1,68 +1,196 @@
 [
     {
-        "no_telepon": "081234567890",
-        "e-mail": "john@gmail.com",
-        "nama": "John Doe",
-        "poin": 1650
+        "no_telepon": "890",
+        "e-mail": "ar@",
+        "nama": "mar",
+        "poin": 97819,
+        "history": [
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 04:13:25"
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-25 04:13:35"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 04:48:33"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 04:50:15"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 15:55:44"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 5,
+                "date": "2024-12-25 16:50:54"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 17:03:51"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 17:34:29"
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-25 17:34:34"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 17:36:42"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 40,
+                "date": "2024-12-25 19:43:03"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-25 20:10:15"
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-25 20:33:03"
+            }
+        ]
     },
     {
-        "no_telepon": "08816637483",
-        "e-mail": "mara@gmail.com",
-        "nama": "mara",
-        "poin": 870
-    },
-    {
-        "no_telepon": "08886637483",
-        "e-mail": "maratus@gmail.com",
-        "nama": "maratus",
-        "poin": 0
-    },
-    {
-        "no_telepon": "081262184370",
-        "e-mail": "farah@gmail.com",
+        "no_telepon": "678",
+        "e-mail": "far@",
         "nama": "farah",
-        "poin": 0
+        "poin": 0,
+        "history": [
+            {
+                "action": "register",
+                "amount": 0,
+                "date": "2024-12-25 17:34:57"
+            }
+        ]
     },
     {
-        "no_telepon": "1",
-        "e-mail": "a",
-        "nama": "m",
-        "poin": 0
+        "no_telepon": "085",
+        "e-mail": "feyfa@",
+        "nama": "feyfa",
+        "poin": 157,
+        "history": [
+            {
+                "action": "register",
+                "amount": 0,
+                "date": "2024-12-28 22:50:16",
+                "riwayat belanja": "-"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 100,
+                "date": "2024-12-28 22:50:38",
+                "riwayat_belanja": 100000
+            },
+            {
+                "action": "tambah poin",
+                "amount": 500,
+                "date": "2024-12-28 22:50:57",
+                "riwayat_belanja": 500000
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-28 22:51:23",
+                "riwayat_belanja": "-"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-28 23:04:08",
+                "riwayat_belanja": 1000
+            },
+            {
+                "action": "tambah poin",
+                "amount": 1,
+                "date": "2024-12-28 23:06:12",
+                "riwayat_belanja": 1000
+            },
+            {
+                "action": "tambah poin",
+                "amount": 300,
+                "date": "2024-12-28 23:06:51",
+                "riwayat_belanja": 300000
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-30 01:29:27",
+                "riwayat_belanja": "-"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 5,
+                "date": "2024-12-30 01:30:24",
+                "riwayat_belanja": 5000
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-30 01:34:25",
+                "riwayat_belanja": "-"
+            }
+        ]
     },
     {
         "no_telepon": "081234567890",
-        "e-mail": "john@gmail.com",
-        "nama": "John Doe",
-        "poin": 50
-    },
-    {
-        "no_telepon": "123",
-        "e-mail": "f@gmailcom",
-        "nama": "f",
-        "poin": 170
-    },
-    {
-        "no_telepon": "1234",
-        "e-mail": "mara@gmail.com",
-        "nama": "mara",
-        "poin": 3200
-    },
-    {
-        "no_telepon": "123456",
         "e-mail": "jim@gmail.com",
-        "nama": "jim",
-        "poin": 750
+        "nama": "jimFadhil",
+        "poin": 0,
+        "history": [
+            {
+                "action": "register",
+                "amount": 0,
+                "date": "2024-12-31 05:20:12",
+                "riwayat belanja": "-"
+            }
+        ]
     },
     {
-        "no_telepon": "456",
+        "no_telepon": "1234567890",
         "e-mail": "farah@gmail.com",
         "nama": "farah",
-        "poin": 9500
-    },
-    {
-        "no_telepon": "2",
-        "e-mail": "b",
-        "nama": "b",
-        "poin": 750
+        "poin": 9750,
+        "history": [
+            {
+                "action": "register",
+                "amount": 0,
+                "date": "2024-12-31 05:20:34",
+                "riwayat belanja": "-"
+            },
+            {
+                "action": "tambah poin",
+                "amount": 10000,
+                "date": "2024-12-31 05:21:01",
+                "riwayat_belanja": 10000000
+            },
+            {
+                "action": "redeem voucher",
+                "amount": -250,
+                "date": "2024-12-31 05:21:08",
+                "riwayat_belanja": "-"
+            }
+        ]
     }
 ]
