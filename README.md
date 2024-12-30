@@ -9,16 +9,18 @@ Anggota :
 3. Farah Kamiliya Izzati, I0324045, [@farahkamiliya](https://github.com/farahkamiliya)
 
 # Program-Member-Toko
-Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup data nama, nomor telepon, e-mail, dan jumlah poin setiap anggota. Fitur utama meliputi penambahan anggota baru, pengelolaan poin untuk menambah atau mengurangi berdasarkan transaksi atau penukaran voucher, serta pembaruan data anggota secara mudah. Program juga dilengkapi validasi nomor telepon admin untuk mencegah kebocoran data member. Dengan fitur-fitur ini, program membantu meningkatkan layanan pelanggan melalui sistem keanggotaan yang terstruktur dan bermanfaat.
+Program ini dirancang untuk admin/kasir/pemilik toko agar dapat mengelola keanggotaan toko dengan efisien, mencakup data nama, nomor telepon, e-mail, dan jumlah poin setiap anggota. Fitur ini dapat ditambahkan di komputer kasir pada toko tersebut. Fitur utama meliputi penambahan anggota baru, pengelolaan poin untuk menambah atau mengurangi berdasarkan transaksi atau penukaran voucher, serta pembaruan data anggota secara mudah. Program juga dilengkapi validasi nomor telepon admin untuk mencegah kebocoran data member(pelanggan). Selain itu, admin dapat mengedit jumlah belanja apabila sebelumnya ada kekeliruandengan meng-klik tombol history. Dengan fitur-fitur ini, program membantu meningkatkan layanan pelanggan melalui sistem keanggotaan yang terstruktur.
 
 # Fitur Aplikasi
-1. Terdapat menu login admin toko
-2. Terdapat menu Daftar/Login member
+1. Terdapat menu login admin toko untuk keamanan(agar yang dapat mengakses hanya admin toko)
+2. Terdapat menu Daftar/Cari member
 3. Menu Daftar dapat menambah data member baru
-4. Menu login dapat memunculkan data member dengan cara memasukkan nomor telepon
+4. Menu Cari Member dapat memunculkan data member dengan cara memasukkan nomor telepon
 5. Setelah memasukkan nomor telepon, data member yang sesuai akan muncul beserta poinnya
 6. Terdapat menu menambah poin atau menukar poin
-7. Poin bisa ditukar dengan voucher 25% atau 40% lalu muncul kode redeem
+7. Terdapat menu history untuk menyimpan riwayat transaksi maupun penukaran poin.
+8. Terdapat pilihan edit di menu history untuk mengedit total belanja yang keliru.
+9. Poin bisa ditukar dengan voucher 25% atau 40% lalu muncul kode redeem
 
 # Library yang digunakan
 1. tkinter: Untuk membuat GUI (Graphical User Interface).
@@ -26,6 +28,8 @@ Program ini dirancang untuk mengelola keanggotaan toko dengan efisien, mencakup 
 3. json: Untuk membaca dan menulis file dalam format JSON
 4. Pillow (PIL): Digunakan untuk memproses dan menampilkan gambar (Image, ImageTk).
 5. string dan random: Untuk menghasilkan kode acak berupa kombinasi huruf dan angka.
+6. datetime: Untuk menggunakan informasi tanggal, bulan, dan tahun.
+7. zoneinfo: Untuk menggunakan informasi jam, menit, dan detik.
 
 # Diagram alir
 ![WhatsApp Image 2024-11-15 at 21 06 55_940ca628](https://github.com/user-attachments/assets/66f5b2d1-11ae-4669-bcc7-bf025a8a2ce9)
