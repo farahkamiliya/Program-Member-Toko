@@ -132,9 +132,8 @@ def show_login_member():
     tk.Label(frame_login, text="Nomor Telepon:", bg='#F5C400', font=("Segoe UI", 20)).grid(row=1, column=0, padx=10, pady=10)
     entry_no_hp = tk.Entry(frame_login, width=22, font =("Segoe UI", 20))
     entry_no_hp.grid(row=1, column=1, padx=10, pady=10)
-
     tk.Button(frame_login, text="Cari", bg='#102A71', fg='white', font=("Segoe UI", 20), command=login).grid(row=2, column=0, columnspan=2, pady=30)
-
+    
     login_window.mainloop()
 
 # Fungsi untuk halaman member
@@ -184,7 +183,6 @@ def show_member_page(member):
     tk.Button(page_member, text="Tukar Poin", command=lambda: vc.buat_menu_voucher(member['no_telepon']), bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=5, column=0, columnspan=2, pady=20)
     tk.Button(page_member, text="History", command=lambda: show_history(member), bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=6, column=0, columnspan=2, pady=20)
     tk.Button(page_member, text="Keluar", command=close_member_window, bg='#102A71', fg='white', font=("Segoe UI", 15)).grid(row=7, column=0, columnspan=2, pady=20)
-
     
 # Jalankan aplikasi
 if __name__ == "main":
