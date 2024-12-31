@@ -8,7 +8,7 @@ from tkinter import simpledialog
 import voucher as vc
 import string
 
-# Fungsi untuk memuat data member dari file JSON
+# Fungsi untuk memuat data member dari file members.JSON
 def memuat_data_member():
     try:
         with open('members.json', 'r') as file:
@@ -17,7 +17,7 @@ def memuat_data_member():
     except FileNotFoundError:
         return []
 
-# Fungsi untuk menyimpan data member ke file JSON
+# Fungsi untuk menyimpan data member ke file members.JSON
 def simpan_data_member(members):
     with open('members.json', 'w') as file:
         json.dump(members, file, indent=4)
@@ -30,7 +30,7 @@ def verifikasi_nomor_hp(nomor_hp):
             return member
     return None
 
-# Fungsi untuk memperbarui history dan poin
+# Fungsi untuk memperbarui history transaksi dan poin
 def update_history(member, action, amount, riwayat_belanja=None):
     now = datetime.now(ZoneInfo("Asia/Jakarta"))
     history_entry = {
@@ -70,7 +70,7 @@ def show_history(member):
                 # Perbarui total poin member
                 member['poin'] += diff_poin
 
-                # Simpan perubahan ke file JSON
+                # Simpan perubahan ke file members.JSON
                 members = memuat_data_member()
                 for i, m in enumerate(members):
                     if m['no_telepon'] == member['no_telepon']:
